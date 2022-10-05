@@ -8,7 +8,7 @@ N = int(input("Введите кол-во элементов списка:\n"))
 pos_1 = int(input("Введите 1 позицию:\n"))
 pos_2 = int(input("Введите 2 позицию:\n"))
 
-if pos_1 <= 0 or pos_1 > N or pos_2 <= 0 or pos_2 > N:
+if pos_1 <= 0 or pos_1 > (2 * N + 1) or pos_2 <= 0 or pos_2 > (2 * N + 1):
     print("Ошибка ввода")
 else:
     num_list = []
