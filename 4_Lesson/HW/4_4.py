@@ -25,5 +25,35 @@ def polynomial(k):
         with open("polynomial.txt", "a", encoding="utf-8") as p:
                     p.write(f"{new_str} = 0\n")
 
-for i in range(3):
+for _ in range(3):
     polynomial(int(input("Задайте степень k:\n")))
+
+# Вариант
+
+# from random import choice
+
+# def polynomial(num: int):
+#     if num < 1:
+#         return 0
+
+#     poly = ""
+#     num_list = range(0, 10)
+    
+#     with open("poly.txt", "a", encoding="utf-8") as my_f:
+#         for i in range(num, 1, -1):
+#             value = choice(num_list)
+#             if value:
+#                 poly += f"{value}*x^{i} {choice('+-')} "
+
+#         value_1 = choice(num_list)
+#         if value_1:
+#             poly += f"{value_1}*x {choice('+-')} "
+        
+#         value_2 = choice(num_list)
+#         if value_2:
+#             poly += f"{value_2}"
+        
+#         my_f.write(f"{poly} = 0\n")
+
+# for _ in range(3):
+#     polynomial(int(input()))
