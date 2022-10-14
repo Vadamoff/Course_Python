@@ -64,10 +64,11 @@ def decode(data: str):
             count = ""
     return "".join(starmap(lambda x, y: x * y, pairs))
 
-# decode 3 вариант - не додумался... (
+# decode 3 вариант
 
 # def decode(data: str):
-#     print([k for k, g in groupby(data) if k.isdigit()])
+#     word_nums = ["".join(g) for k, g in groupby(data.strip(), key=str.isdigit)]
+#     return "".join([f"{int(word_nums[i]) * word_nums[i + 1]}" for i in range(0, len(word_nums), 2)])
 
 def read(file: str):
     with open(file, "r", encoding="utf-8") as f:
