@@ -30,10 +30,22 @@ def condit(t: str, field: list):
     field[i][j] = 'X'
     return field
 
-row_1 = ['1', '2', '3']
-row_2 = ['4', '5', '6']
-row_3 = ['7', '8', '9']
-field = [row_1, row_2, row_3]
+def check_victory():
+    
+    return 
+
+field = [['1', '2', '3'], \
+         ['4', '5', '6'], \
+         ['7', '8', '9']]
+
+victory_combs = [['1', '2', '3'], \
+                 ['4', '5', '6'], \
+                 ['7', '8', '9'], \
+                 ['1', '4', '7'], \
+                 ['2', '5', '8'], \
+                 ['3', '6', '9'], \
+                 ['1', '5', '9'], \
+                 ['3', '5', '7']]
 
 print_field(field)
 turn(field)
