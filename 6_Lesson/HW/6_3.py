@@ -7,12 +7,12 @@ def dictionary(text: str) -> dict:
     dict = {}
     names = sorted(text.split())
     for name in names:
-        key = name[0].upper()
-        value = name.capitalize()
-        if key in dict:
-            dict[key] += [value]
+        k = name[0].upper()
+        v = name.capitalize()
+        if k in dict:
+            dict[k] += [v]
         else:
-            dict[key] = [value]
+            dict[k] = [v]
     return dict
 
 print(dictionary(input("Введите имена через пробел:\n")))
