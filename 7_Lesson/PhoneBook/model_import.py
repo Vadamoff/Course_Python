@@ -1,5 +1,6 @@
 from os import path
 import menu as m
+import database as db
 
 def check(file: str):
     if path.exists(file):
@@ -10,10 +11,11 @@ def check(file: str):
 
 def read(file: str):
     with open(file, "r", encoding="utf-8") as f:
-        info = ""
+        data = db.contacts
         for line in f:
-            person = line.split(';')
-            info += f"Фамилия: {person[0]}    Имя: {person[1]}\n\
-Телефон: {person[2]}\n\
-Комментарий: {person[3]}\n"
-    return info
+            person = line.replace("\n", '').split(';')
+            data["Фамилия"] += [person[0]]
+            data["Имя"] += [person[1]]
+            data["Телефон"] += [person[2]]
+            data["Комментарий"] += [person[3]]
+    return db.import_db(data)
