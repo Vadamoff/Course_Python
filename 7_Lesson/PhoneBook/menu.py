@@ -25,7 +25,7 @@ def select():
         info = db.contacts
         return mp.print_info(info)
     elif action == 'a':
-        return select()
+        return add_data()
     elif action == 'r':
         return select()
     elif action == 'd':
@@ -75,3 +75,10 @@ def export_format():
     else:
         print("Введён неверный символ")
         return select()
+
+def add_data():
+    surname = input(f"Введите фамилию:\n")
+    name = input(f"Введите имя:\n")
+    number = input(f"Введите номер телефона:\n")
+    comment = input(f"Введите комментарий:\n")
+    return db.add_to_db(surname, name, number, comment)

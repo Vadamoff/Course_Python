@@ -1,3 +1,5 @@
+import menu as m
+
 def print_info(contacts):
     info = ""
     surname = contacts.get("Фамилия")
@@ -8,4 +10,5 @@ def print_info(contacts):
         info += f"Фамилия: {surname[i]}   Имя: {name[i]}\n\
 Телефон: {number[i]}\n\
 Комментарий: {comment[i]}\n\n"
-    return info
+    print(info)
+    return m.select()
