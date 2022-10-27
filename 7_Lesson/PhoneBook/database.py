@@ -46,10 +46,10 @@ def find_in_db(data, operation):
         numbers = []
         comments = []
         for item in indexes:
-            surnames += surname[item]
-            names += name[item]
-            numbers += number[item]
-            comments += comment[item]
+            surnames.append(surname[item])
+            names.append(name[item])
+            numbers.append(number[item])
+            comments.append(comment[item])
         return mp.print_many_found(indexes, surnames, names, numbers, comments, operation)
     else:
         index = result[0]
